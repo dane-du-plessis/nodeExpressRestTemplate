@@ -1,5 +1,14 @@
 import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
 
-console.log("There is more there will be more and more");
+const app = express();
 
-console.log(process.env.MY_SECRET);
+app.use(cors());
+app.get('/', (req,res) => {
+res.send('Getting this?');
+
+})
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
+});
