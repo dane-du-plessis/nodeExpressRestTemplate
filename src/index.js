@@ -85,23 +85,23 @@ app.listen(process.env.PORT, () => {
 let users = {
   1: {
     id: '1',
-    username: 'Robin Wieruch',
+    username: 'Susan Erhart',
   },
   2: {
     id: '2',
-    username: 'Dave Davids',
+    username: 'Jeremy Smith',
   },
 };
  
 let messages = {
   1: {
     id: '1',
-    text: 'Hello World',
+    text: 'Hello Cosmos',
     userId: '1',
   },
   2: {
     id: '2',
-    text: 'By World',
+    text: 'Bye Cosmos',
     userId: '2',
   },
 };
