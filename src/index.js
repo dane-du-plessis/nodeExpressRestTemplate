@@ -6,20 +6,24 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Getting this?');
+app.get('/users', (req, res) => {
+  res.send('Get all users');
 })
 
-app.post('/', (req,res) => {
+app.get('/users/:userid', (req, res) => {
+  res.send(`Get user ${req.params.userid}`);
+})
+
+app.post('/users', (req,res) => {
   return res.send('Received POST HTTP');
 })
 
-app.put('/', (req,res) => {
-  return res.send('Recieved PUT HTTP');
+app.put('/users/:userid', (req,res) => {
+  return res.send(`PUT method for userid ${req.params.userid}`);
 })
 
-app.delete('/', (req,res) => {
-  return res.send('Recieved DELETE HTTP');
+app.delete('/users/:userid', (req,res) => {
+  return res.send(`DELETE method for userid ${req.params.userid}`);
 })
 
 app.listen(process.env.PORT, () => {
